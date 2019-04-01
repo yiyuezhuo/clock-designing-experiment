@@ -11,7 +11,8 @@ begin
 	end 
 	else
 	begin
-		if(cnt == 47) 
+		//if(cnt == 47) 
+		if(cnt == 23)
 		begin
 			cnt <= 1'b0;
 			clk_out <= ~clk_out;

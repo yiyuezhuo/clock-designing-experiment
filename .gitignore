@@ -5,8 +5,10 @@ incremental_db
 *.smsg
 *.summary
 *.pin
-*.qpf
 *.qsf
 *.sof
 *.bak
 *.vwf
+*.qpf
+*.qws
+*.dpf

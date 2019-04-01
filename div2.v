@@ -11,7 +11,8 @@ begin
 	end 
 	else
 	begin
-		if(cnt == 1) 
+		//if(cnt == 1) 
+		if(cnt == 0)
 		begin
 			cnt <= 1'b0;
 			clk_out <= ~clk_out;
