@@ -12,6 +12,7 @@ parameter cnt = 60;
 
 wire clk_merged;
 
+
 assign add = !digits[0] && !digits[1]  && !digits[2]  && !digits[3]  && !digits[4]  && !digits[5];
 assign clk_merged = clk || (clk_adjust && adjust);
 
@@ -21,6 +22,9 @@ begin
 	if(clear)
 	begin
 		digits <= 6'b0;//5'b0;
+		//adjust_delay1 <= 1'b0;
+		//adjust_delay2 <= 1'b0;
+		//adjust_delay3 <= 1'b0;
 	end 
 	else if (adjust) begin
 		if(!keep) begin
