@@ -1,4 +1,4 @@
-module counter24(
+module counter_var(
 	input clk,
 	input adjust,
 	input clk_adjust,
@@ -7,6 +7,8 @@ module counter24(
 	output reg [5:0] digits,
 	output add
 );
+
+parameter cnt = 60;
 
 wire clk_merged;
 
@@ -22,7 +24,7 @@ begin
 	end 
 	else if (adjust) begin
 		if(!keep) begin
-			if(digits == 23)
+			if(digits == cnt)
 			begin
 				digits <= 6'b0;//5'b0;
 			end
@@ -37,7 +39,7 @@ begin
 	end
 	else begin
 		if(!keep) begin
-			if(digits == 23)
+			if(digits == cnt)
 			begin
 				digits <= 6'b0;//5'b0;
 			end

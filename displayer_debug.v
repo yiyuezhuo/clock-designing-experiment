@@ -1,17 +1,24 @@
-module displayer( // displayer just map the clock state to displayer view, so it doesn't provide any control utility
+module displayer_debug( // displayer just map the clock state to displayer view, so it doesn't provide any control utility
 	input clk_1000hz,
 	input [5:0] sec,
 	input [5:0] min,
 	input [5:0] hour,
 	output reg [7:0] select_dig,
-	output reg [7:0] select_seg
+	output reg [7:0] select_seg,
+	
+	output reg [5:0] number,
+	output [7:0] low_digit,
+	output [7:0] high_digit,
+	output reg [2:0] cnt
 );
 
+/*
 reg [5:0] number;
 wire [7:0] low_digit;
 wire [7:0] high_digit;
 
 reg [2:0] cnt; // take 0-5
+*/
 
 full_number_to_digit fntd(number, low_digit, high_digit);
 

@@ -32,6 +32,7 @@ assign light0 = clk_sec;
 divs ds(clk_48mhz, rst_n, clk_1000hz, clk_500hz, clk_sec);
 counter cout(clk_sec, adjust_sec, adjust_min, adjust_hour, clear, keep, sec, min, hour, clk_day);
 displayer dsp(clk_1000hz, sec, min, hour, select_dig, select_seg);
+//displayer dsp(clk_500hz, sec, min, hour, select_dig, select_seg);
 sounder sod(clk_1000hz, clk_500hz, sec, min, hour, beep);
 
 endmodule
